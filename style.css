@@ -1,0 +1,405 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  background-image: url("img/sfondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* inizio header -----*/
+header {
+  height: 250px;
+  display:flex;
+  flex-direction: column;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 999;
+}
+.header1{
+  height: 150px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+}
+.header2 {
+  height: 100px;
+  display: flex;
+
+}
+.titolo-artisti{
+  width:240px;
+  height: 100%;
+  background: black;
+  color: #ff65bd;
+    display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.titolo-brani{
+  width: calc(100% - 240px);
+  height: 100%;
+  text-align: center;
+  margin: auto;
+  padding: 25px;
+  background: linear-gradient(black,#ff65bd,rgba(255,101,189,0.5));
+}
+.titolo-spazio-brani h1{
+  font-size: -webkit-xxx-large;
+  font-family: 'Baloo Bhaina 2', cursive;
+}
+.sign {
+  transition: transform 4s;
+}
+.sign:hover {
+  transform: translate(0,300px);
+}
+
+.logo {
+  width: 15%;
+  height: 90%;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+/* #titolo {
+  width: 60%;
+  height: 100%;
+} */
+/* #titolo img {
+  width: 100%;
+  height: 100%;
+  filter:invert();
+} */
+/* fine   header -----*/
+
+/* inizio main  ------*/
+main {
+  width: 100%;
+  height: 100vh;
+  /* background-image: url("img/sfondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 150px;
+}
+
+#info {
+  width: calc(100% - 240px);
+  height: 100vh;
+  order: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 100px;
+  overflow: auto;
+}
+
+
+.riga {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+  max-height: 450px;
+}
+.brani{
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.audio{
+  height: 54px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.brani-poster{
+  height: calc(100% - 54px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+.brani-poster img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 5px solid black;
+
+}
+
+/* inizio artisti sx ---- */
+#main-artisti {
+  width: 240px;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 150px;
+  padding-top: 120px;
+
+}
+
+.titolo-artisti h1 {
+  font-family: 'Baloo Bhaina 2', cursive;
+
+}
+
+.artisti {
+  width:200px;
+  text-align: center;
+  margin:30px 0;
+  background-color: #141114;
+  position: relative;
+}
+
+
+.artisti img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1);
+  transition: filter 2s;
+
+}
+.artisti img:hover {
+  filter:grayscale(0);
+}
+/* fine artisti sx ---- */
+
+/* .artisti img:hover {
+  filter:grayscale(0);
+  transform:scale(1.5);
+  position: absolute;
+  top:200px;
+  left:0;
+
+} */
+
+/* fine main  ------*/
+
+/* inizio footer ------*/
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  position:fixed;
+  bottom:0;
+  left:0;
+
+}
+/* fine footer ------*/
+/* effetto titolo --------*/
+@font-face {
+  font-family: Clip;
+  src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+}
+
+
+
+.sign {
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  background-image: radial-gradient(
+    ellipse 50% 35% at 50% 50%,
+    #6b1839,
+    transparent
+  );
+
+  letter-spacing: 2;
+
+  top: 0;
+  font-family: "Clip";
+  text-transform: uppercase;
+  font-size: 6em;
+  color: #ffe6ff;
+  text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+    -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+    0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  animation: shine 2s forwards, flicker 3s infinite;
+}
+
+@keyframes blink {
+  0%,
+  22%,
+  36%,
+  75% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  }
+  28%,
+  33% {
+    color: #ff65bd;
+    text-shadow: none;
+  }
+  82%,
+  97% {
+    color: #ff2483;
+    text-shadow: none;
+  }
+}
+
+.flicker {
+  animation: shine 2s forwards, blink 3s 2s infinite;
+}
+
+.fast-flicker {
+  animation: shine 2s forwards, blink 10s 1s infinite;
+}
+
+@keyframes shine {
+  0% {
+    color: #6b1839;
+    text-shadow: none;
+  }
+  100% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+
+  4% {
+    opacity: 0.9;
+  }
+
+  6% {
+    opacity: 0.85;
+  }
+
+  8% {
+    opacity: 0.95;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  11% {
+    opacity: 0.922;
+  }
+
+  12% {
+    opacity: 0.9;
+  }
+
+  14% {
+    opacity: 0.95;
+  }
+
+  16% {
+    opacity: 0.98;
+  }
+
+  17% {
+    opacity: 0.9;
+  }
+
+  19% {
+    opacity: 0.93;
+  }
+
+  20% {
+    opacity: 0.99;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0.94;
+  }
+
+  28% {
+    opacity: 0.98;
+  }
+
+  37% {
+    opacity: 0.93;
+  }
+
+  38% {
+    opacity: 0.5;
+  }
+
+  39% {
+    opacity: 0.96;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0.97;
+  }
+
+  46% {
+    opacity: 0.94;
+  }
+
+  56% {
+    opacity: 0.9;
+  }
+
+  58% {
+    opacity: 0.9;
+  }
+
+  60% {
+    opacity: 0.99;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  72% {
+    opacity: 0.95;
+  }
+
+  93% {
+    opacity: 0.93;
+  }
+
+  95% {
+    opacity: 0.95;
+  }
+
+  97% {
+    opacity: 0.93;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
