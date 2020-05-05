@@ -14,7 +14,7 @@ header {
   height: 250px;
   display:flex;
   flex-direction: column;
-  position: fixed;
+  position: static;
   top:0;
   left:0;
   z-index: 999;
@@ -80,13 +80,13 @@ header {
 /* inizio main  ------*/
 main {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 250px - 100px);
   /* background-image: url("img/sfondo.jpg");
   background-repeat: no-repeat;
   background-size: cover; */
   display: flex;
   justify-content: space-between;
-  margin-top: 150px;
+
   position: relative;
 }
 
@@ -149,9 +149,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 100px;
-  margin-top: 100px;
-  padding:0px;
+
+  
   height: 100%;
 }
 
