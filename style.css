@@ -87,17 +87,18 @@ main {
   display: flex;
   justify-content: space-between;
   margin-top: 150px;
+  position: relative;
 }
 
 #info {
   width: calc(100% - 240px);
-  height: 100vh;
+  height: 100%;
   order: 2;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding-top: 100px;
+
   overflow: auto;
 }
 
@@ -143,14 +144,15 @@ main {
 /* inizio artisti sx ---- */
 #main-artisti {
   width: 240px;
-  height: 100vh;
+
   overflow: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-bottom: 150px;
-  padding-top: 120px;
-
+  align-items: flex-start;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  padding:0px;
+  height: 100%;
 }
 
 .titolo-artisti h1 {
@@ -402,4 +404,13 @@ footer {
   to {
     opacity: 1;
   }
+}
+.barra-espansa #main-artisti {
+  width: 100%;
+  position: absolute;
+  top:0px;
+  left:0px;
+}
+.barra-espansa #info {
+  margin-left: 240px;
 }
